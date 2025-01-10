@@ -1,4 +1,4 @@
-## Git DEMO
+## Git käyttö
 
 **Alustetaan työkansio Gitin avulla**
 
