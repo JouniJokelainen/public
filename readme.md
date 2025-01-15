@@ -23,7 +23,7 @@ Luodaan projekti hakemistoon uusi *a.txt*  niminen tiedosto.
 `git add a.txt` | Lisätään a.txt indeksiin  
 `git status` | Tarkistetaan gitin tilanne  
 `git commit -m "Tiedosto a.txt luotu"` | Luodaan uusi committi    
-`git log` | Tarkistetaan git commitit  
+`git log` | Tarkistetaan commitit  
 
 **Luodaan tiedosto b.txt ja siihen sisältöä ja mutta vasta tässä vaiheessa "tajutaan" että se olisi pitänyt lisätä jo edelliseen commititin**
 
@@ -39,34 +39,37 @@ Luodaan projekti hakemistoon uusi *c.txt*  niminen tiedosto.
 `git add .` | Lisätään tiedosto *c.txt* indeksiin..   
 ja tajutaan että tiedostoa ei olisikaan vielä pitänyt lisätä indeksiin  
 `git diff HEAD` |  Tarkistetaan mitä eroa on työkansiolla ja viimeksi commitoidulla tiedolla     
-`git restore --staged c.txt` | Poistetaan tiedosto *c.txt* indkeksistä eli perutaan edellinen add . c.txt tiedoston osalta.  
-`git status` | Tarkistetaan gitin tilanne 
+`git restore --staged c.txt` | Poistetaan tiedosto *c.txt* indkeksistä eli perutaan edellinen *add .* komento tiedoston *c.txt* osalta.  
+`git status` | Tarkistetaan gitin tilanne. 
 
 **Lisätään tiedosto d.txt ja siihen sisältöä**
 
-`git add .`   
-`git commit -m "lisätty tiedostot c.txt ja d.txt"` = lisätään ja suoritetaan commit"  
-`git log`
+Luodaan projekti hakemistoon uusi *d.txt*  niminen tiedosto.  
+`git add .` | Lisätään kaikki työkansion muutokset indeksiin.  Piste tarkoittaa kaikkia edellisen kommitin jälkeen tulleita muutoksia.     
+`git commit -m "lisätty tiedostot c.txt ja d.txt"` | Luodaan uusi commit.    
+`git log` | Tarkistetaan commitit  
 
 **Lisätään lisää tietoa d.txt tiedostoon ja tallennetaan muutokset (ei commitoida)**
 
-`git  checkout -- d.txt` = palautetaan d.txt aiempaan versioon (edelliseen kommittiin)    
-**HUOM**: git revert *commit hash* = peruu hashissä/commitissa tehdyt muutokset tiedostoihin  
+Lisätään tiedostoon *d.txt* uutta tietoa ja tallennetaan muutos.  
+Huomataan että muutos halutaan perua.  
+`git  checkout -- d.txt` | Palautetaan *d.txt* aiempaan versioon eli edellisessä commitissa olevaan tilanteeseen.      
 
-**Luodaan uusi branch**
+**Luodaan uusi git haara eli branch**
 
-`git branch` = tarkastetaan puu  
-`git branch uusibranch` = luodaan uus branch TAI ``git checkout -b uusibranch`` (luo ja siirtyy branchiin samointein)
-`git checkout uusibranch` = siirrytään uuteen branchiin
+`git branch` = Tarkastetaan nykyiset branchit.    
+`git branch uusibranch` | Luodaan uusi branch TAI `git checkout -b uusibranch` | Luo ja siirtyy branchiin yhdellä komennolla.  
+`git checkout uusibranch` | Siirrytään uuteen branchiin jos edellä ei käytetty komentoa *git checkout -b uusibranch*  
 
 **Luodaan uusi tiedosto e.txt ja siihen sisältöä**
 
-`git add e.txt` = lisätään seuraavaan committiin  
-`git commit -m "Lisätty tiedosto e.txt"` luodaan commit  
-`git log`   
-`git checkout main` = siirrytään master branchiin  
-`git branch` = tarkastetaan branch  
-`git merge uusibranch` = yhdistetään haarat  
+Luodaan uusi *e.txt* niminen tiedosto.  
+`git add e.txt` | Lisätään tiedosto *e.txt*  indeksiin.    
+`git commit -m "Lisätty tiedosto e.txt"` | Luodaan uusi committi.    
+`git log`   Tarkistetaan commitit.      
+`git checkout main` |  Siirrytään takaisin *master* branchiin  
+`git branch` | Tarkistetaan aktivinen branch    
+`git merge uusibranch` | Yhdistetaan *master* ja *uusibranch haaroissa* olevat tiedot ja commitit.    
 
 **Tarkastetaan että e.txt on ilmestynyt työkansioon ja poistetaan uusibranch** 
 
