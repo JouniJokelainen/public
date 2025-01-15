@@ -73,25 +73,27 @@ Luodaan uusi *e.txt* niminen tiedosto.
 
 **Tarkastetaan että e.txt on ilmestynyt työkansioon ja poistetaan uusibranch** 
 
-`git branch -d uusibranch` = poistetaan sivuhaara  
+Tarkistetaan että tiedosto *e.txt* on ilmestynyt työhakemistoon.  
+
+`git log` |  Tarkistetaan että edellä uusihaara branchissä luotu committi on lisätty *master* haaran kommitteihin.   
+`git branch -d uusibranch` | Poistetaan edellä luotu *uusibranch* niminen branchi.    
 
 **Tägääminen**:
 
-Merkitsee työhakemiston nykyisen tilan tägillä joka tarttuu nykyiseen (mutta ei seuraaviin) kommittin  
-`git tag v.1.0` = luo lightweight tägin jossa ei ole tietoja  
+`git tag v.1.0` | Lisää ns. *lifhtweight* tägin *v.1.0* joka tarttuu nykyiseen (mutta ei seuraaviin) kommittin.    
 
-Luodaan esim. y.txt  
-`git add .`  
-`git commit -m "Lisätty tiedosto y.txt`  
-`git log --oneline`  
-`git tag` = näyttää tägit  
+Luodaan uusi *y.txt* niminen tiedosto.    
+`git add y.txt` | Lisätään tiedosto *y.txt* indeksiin.    
+`git commit -m "Lisätty tiedosto y.txt` | Luodaan uusi committi.    
+`git log --oneline` | Tarkistetaan git commitit tiiviissä muodossa.    
+`git tag` | Tarkistetaan tägit.     
 
-`git tag -a v.1.1 -m "Versio 1.1"` = luo ns. annotated tägin josta voidaan kaivaa tietoja `git show v.1.1` komennolla  
-`git show v.1.1`  
-`git log --oneline`  
-`git tag 1.2` = luo tägin v.1.1 rinnalle = halutaan poistaa se  
-`git log --oneline`
-`git tag -d v1.2`  
+`git tag -a v.1.1 -m "Versio 1.1"` | Luodaan ns. *annotated täg*.     
+`git show v.1.1` | Näyttää tägin *v.1.1*  
+`git log --oneline` | Tarkistetaan git commitit tiiviissä muodossa   
+`git tag v1.2` = luo tägin v.1.1 rinnalle    
+`git log --oneline` | Tarkistetaan git commitit tiiviissä muodossa  
+`git tag -d v1.2`| Poistetaan edellä luotu rinnakkainen v1.2 tägi    
 
 **Tägit eivät siirry esim. Githubiin automaattisesti**   
 `git push v.1.1` = siirtää vain  kyseisen tägin  
