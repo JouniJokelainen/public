@@ -1,8 +1,14 @@
 ## Git käyttö
 
-**Alustetaan työkansio Gitin avulla**
+Harmaalla pohjalla näkyvät komennot annetaan joko komentokehotteessa tai *Visual Studio Code*:n pääte (terminal) ikkunassa.  
+Jos käytetään komentokehotetta, tulee työhakemistona olla 
 
-`git init `  alustetaan git tiedot  
+Luodaan ensin uusi *Projekti* niminen kansio/hakemisto esim. *Tiedostot* hakemistoon.  
+`md %userprofile%\documents`  
+
+**Alustetaan työkansio Git:ä**
+
+`git init `    alustetaan työhakemisto git käyttävarten   
 ` git config --global user.email "you@example.com" `  
 ` git config --global user.name "Your Name"`  
 `git config --list` | näyttää asetukset  
@@ -18,7 +24,7 @@
 `git commit -m "Tiedosto a.txt luotu"`  
 `git log`  
 
-**Luodaan tiedosto b.txt ja siihen sisältöä ja tajutaan että se olisi pitänyt lisätä jo edelliseen commititin**
+**Luodaan tiedosto b.txt ja siihen sisältöä ja mutta vasta tässä vaiheessa "tajutaan" että se olisi pitänyt lisätä jo edelliseen commititin**
 
 `git add b.txt`  
 `git status`  
