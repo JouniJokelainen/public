@@ -78,6 +78,12 @@ Tarkistetaan että tiedosto *e.txt* on ilmestynyt työhakemistoon.
 `git log` |  Tarkistetaan että edellä uusihaara branchissä luotu committi on lisätty *master* haaran kommitteihin.   
 `git branch -d uusibranch` | Poistetaan edellä luotu *uusibranch* niminen branchi.    
 
+**Työhakemiston tarkastelu halutussa commitissa** 
+`git log --oneline` |  Listataan commitit ja otetaan jonkin commitin id leikepöydälle  
+`git checkout *commit id*` | Siirrytåään haluttuun committiin sen id-numeron perusteella  
+Työhakemiston sisälktö päivittyy vastaamaan työhakemiston tilannetta committin tallennuksen hetkellä.  
+`chekcout master` | siirrytään takaisin viimeisimmän commitin mukaiseen tilanteeseen.  
+
 **Tägääminen**:
 
 `git tag v.1.0` | Lisää ns. *lifhtweight* tägin *v.1.0* joka tarttuu nykyiseen (mutta ei seuraaviin) kommittin.    
