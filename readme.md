@@ -8,35 +8,39 @@ Luodaan ensin uusi *Projekti* niminen kansio/hakemisto esim. *Tiedostot* hakemis
 
 **Alustetaan työkansio Git:ä**
 
-`git init `    alustetaan työhakemisto git käyttävarten   
-` git config --global user.email "you@example.com" `  
-` git config --global user.name "Your Name"`  
-`git config --list` | näyttää asetukset  
-`git config user.name` | (näyttää käyttäjän)  
-`git config --global init.defaultBranch main` (muuttaa päähaaran nimeksi main masterin sijaan)  
-`git config --list --global` | näyttää globaalit asetukset  
-`git config --edit --global` | (avaa git asetukset oletuseditoriin. tämä valitaan alun perin gittiä asennettaessa)  
+`git init ` | Alustetaan työhakemisto git käyttöä varten   
+` git config --global user.email "you@example.com" `| Määrittää sähköpostiosoitteen    
+` git config --global user.name "Etunimi Sukunimi"` | Määrittää käyttäjänimen    
+`git config --list` | Näyttää asetukset  
+`git config user.name` | Näyttää käyttäjän edellä määritetyn käyttäjänimen    
+`git config --global init.defaultBranch main` | Muuttaa päähaaran nimeksi main masterin sijaan    
+`git config --list --global` | Näyttää globaalit asetukset  
+`git config --edit --global` | Avaa git asetukset oletuseditoriin. Oletuseditori valitaan alun perin gittiä asennettaessa)  
 
 **Luodaan tiedosto a.txt ja sinne sisältöä**
 
-`git add a.txt`  
-`git status`  
-`git commit -m "Tiedosto a.txt luotu"`  
-`git log`  
+Luodaan projekti hakemistoon uusi *a.txt*  niminen tiedosto.  
+`git add a.txt` | Lisätään a.txt indeksiin  
+`git status` | Tarkistetaan gitin tilanne  
+`git commit -m "Tiedosto a.txt luotu"` | Luodaan uusi committi    
+`git log` | Tarkistetaan git commitit  
 
 **Luodaan tiedosto b.txt ja siihen sisältöä ja mutta vasta tässä vaiheessa "tajutaan" että se olisi pitänyt lisätä jo edelliseen commititin**
 
-`git add b.txt`  
-`git status`  
-`git commit --amend` (muutetaan kommentointi sopivaksi ja tallennetaan) TAI ```git commit --amend -m "Lisätty tiedosto A.txt ja B.txt"```
-`git log --oneline `
+Luodaan *projekti* hakemistoon uusi *b.txt*  niminen tiedosto.  
+`git add b.txt` | Lisätään *b.txt* indeksiin  
+`git status` | Tarkistetaan gitin tilanne    
+`git commit --amend -m "Lisätty tiedosto A.txt ja B.txt"` | Lisätään indeksissä olevat tiedot eli uusi tiedosto *b.txt* edelliseen kommitiin ja muutetaan commitin komenttia    
+`git log --oneline` |  Tarkistetaan git commitit tiiviimmässä muodossa 
 
 **Luodaan tiedosto c.txt ja sinne sisältöä**
 
-`git add .` lisätään c.txt = seuraavaan indeksiin ja tajutaan että ei pitänytkään vielä lisätä  
-`git diff HEAD` näyttää mitä eroa on työkansiolla ja viimeksi commitoidulla tiedolla    
-`git restore --staged c.txt` tai  `git reset HEAD c.txt` = poistetaan tulevasta commitista eli perutaan edellinen add . c.txt tiedoston osalta.
-`git status`
+Luodaan projekti hakemistoon uusi *c.txt*  niminen tiedosto.  
+`git add .` | Lisätään tiedosto *c.txt* indeksiin..   
+ja tajutaan että tiedostoa ei olisikaan vielä pitänyt lisätä indeksiin  
+`git diff HEAD` |  Tarkistetaan mitä eroa on työkansiolla ja viimeksi commitoidulla tiedolla     
+`git restore --staged c.txt` | Poistetaan tiedosto *c.txt* indkeksistä eli perutaan edellinen add . c.txt tiedoston osalta.  
+`git status` | Tarkistetaan gitin tilanne 
 
 **Lisätään tiedosto d.txt ja siihen sisältöä**
 
