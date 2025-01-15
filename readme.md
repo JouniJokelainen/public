@@ -79,6 +79,7 @@ Tarkistetaan että tiedosto *e.txt* on ilmestynyt työhakemistoon.
 `git branch -d uusibranch` | Poistetaan edellä luotu *uusibranch* niminen branchi.    
 
 **Työhakemiston tarkastelu halutussa commitissa**   
+
 `git log --oneline` |  Listataan commitit ja otetaan jonkin commitin id leikepöydälle    
 `git checkout *commit id*` | Siirrytåään haluttuun committiin sen id-numeron perusteella    
 Työhakemiston sisälktö päivittyy vastaamaan työhakemiston tilannetta committin tallennuksen hetkellä.    
