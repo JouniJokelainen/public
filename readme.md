@@ -1,4 +1,4 @@
-## Git käyttö
+## Git versiohallinnan käytöstä
 
 Harmaalla pohjalla näkyvät komennot annetaan joko komentokehotteessa tai *Visual Studio Code*:n pääte (terminal) ikkunassa.  
 Jos käytetään komentokehotetta, tulee työhakemistona olla 
@@ -19,7 +19,7 @@ Luodaan ensin uusi *Projekti* niminen kansio/hakemisto esim. *Tiedostot* hakemis
 
 **Luodaan tiedosto a.txt ja sinne sisältöä**
 
-Luodaan projekti hakemistoon uusi *a.txt*  niminen tiedosto.  
+Luodaan projekti hakemistoon uusi *a.txt*  niminen tiedosto.  Asetetaan sisällöksi *a* ja tallennetaan muutokset.  
 `git add a.txt` | Lisätään a.txt indeksiin  
 `git status` | Tarkistetaan gitin tilanne  
 `git commit -m "Tiedosto a.txt luotu"` | Luodaan uusi committi    
@@ -27,7 +27,7 @@ Luodaan projekti hakemistoon uusi *a.txt*  niminen tiedosto.
 
 **Luodaan tiedosto b.txt ja siihen sisältöä ja mutta vasta tässä vaiheessa "tajutaan" että se olisi pitänyt lisätä jo edelliseen commititin**
 
-Luodaan *projekti* hakemistoon uusi *b.txt*  niminen tiedosto.  
+Luodaan *projekti* hakemistoon uusi *b.txt*  niminen tiedosto.  Asetetaan sisällöksi *b* ja tallennetaan muutokset.  
 `git add b.txt` | Lisätään *b.txt* indeksiin  
 `git status` | Tarkistetaan gitin tilanne    
 `git commit --amend -m "Lisätty tiedosto A.txt ja B.txt"` | Lisätään indeksissä olevat tiedot eli uusi tiedosto *b.txt* edelliseen kommitiin ja muutetaan commitin komenttia    
@@ -35,7 +35,7 @@ Luodaan *projekti* hakemistoon uusi *b.txt*  niminen tiedosto.
 
 **Luodaan tiedosto c.txt ja sinne sisältöä**
 
-Luodaan projekti hakemistoon uusi *c.txt*  niminen tiedosto.  
+Luodaan projekti hakemistoon uusi *c.txt*  niminen tiedosto.  Asetetaan sisällöksi *c* ja tallennetaan muutokset.  
 `git add .` | Lisätään tiedosto *c.txt* indeksiin..   
 ja tajutaan että tiedostoa ei olisikaan vielä pitänyt lisätä indeksiin  
 `git diff HEAD` |  Tarkistetaan mitä eroa on työkansiolla ja viimeksi commitoidulla tiedolla     
@@ -44,7 +44,7 @@ ja tajutaan että tiedostoa ei olisikaan vielä pitänyt lisätä indeksiin
 
 **Lisätään tiedosto d.txt ja siihen sisältöä**
 
-Luodaan projekti hakemistoon uusi *d.txt*  niminen tiedosto.  
+Luodaan projekti hakemistoon uusi *d.txt*  niminen tiedosto.  Asetetaan sisällöksi *d* ja tallennetaan muutokset.  
 `git add .` | Lisätään kaikki työkansion muutokset indeksiin.  Piste tarkoittaa kaikkia edellisen kommitin jälkeen tulleita muutoksia.     
 `git commit -m "lisätty tiedostot c.txt ja d.txt"` | Luodaan uusi commit.    
 `git log` | Tarkistetaan commitit  
@@ -63,7 +63,7 @@ Huomataan että muutos halutaan perua.
 
 **Luodaan uusi tiedosto e.txt ja siihen sisältöä**
 
-Luodaan uusi *e.txt* niminen tiedosto.  
+Luodaan uusi *e.txt* niminen tiedosto.  Asetetaan sisällöksi *e* ja tallennetaan muutokset.  
 `git add e.txt` | Lisätään tiedosto *e.txt*  indeksiin.    
 `git commit -m "Lisätty tiedosto e.txt"` | Luodaan uusi committi.    
 `git log`   Tarkistetaan commitit.      
@@ -82,7 +82,7 @@ Tarkistetaan että tiedosto *e.txt* on ilmestynyt työhakemistoon.
 
 `git tag v.1.0` | Lisää ns. *lifhtweight* tägin *v.1.0* joka tarttuu nykyiseen (mutta ei seuraaviin) kommittin.    
 
-Luodaan uusi *y.txt* niminen tiedosto.    
+Luodaan uusi *y.txt* niminen tiedosto. Asetetaan sisällöksi *y* ja tallennetaan muutokset.     
 `git add y.txt` | Lisätään tiedosto *y.txt* indeksiin.    
 `git commit -m "Lisätty tiedosto y.txt` | Luodaan uusi committi.    
 `git log --oneline` | Tarkistetaan git commitit tiiviissä muodossa.    
@@ -95,93 +95,96 @@ Luodaan uusi *y.txt* niminen tiedosto.
 `git log --oneline` | Tarkistetaan git commitit tiiviissä muodossa  
 `git tag -d v1.2`| Poistetaan edellä luotu rinnakkainen v1.2 tägi    
 
-**Tägit eivät siirry esim. Githubiin automaattisesti**   
-`git push v.1.1` = siirtää vain  kyseisen tägin  
-`git push tags` = siirtää kaikki tägit  
-`git push --delete v1.1` = poistaa ko. tägin remotesta  
+**Tägit eivät kopioidu esim. Githubiin automaattisesti**   
+Jos tägit halutaan kopioida esim. GitHub ympäristöön tulee ne siirtää sinne erikseen.  
+`git push v.1.1` | Kopioi vain  kyseisen tägin.   
+`git push tags` | Kopioi kaikki tägit    
+`git push --delete v1.1` | Poistaa ko. tägin remotesta (esim. GitHub).    
 
 #### Tiedostojen palauttamisesta: 
 
 **Tallennettujen *commitoimattomien* tietojen peruminen**: 
 
-Lisätään työkansioon tiedosto x.txt vaikkapa VScodella ja sisällöksi X ja tallennetaan
+Lisätään työkansioon tiedosto x.txt ja asetetaan sisällöksi *x* ja tallennetaan muutokset.  
+`git add x.txt` Lisätään y.txt indeksiin.  
+`git commit -m "Lisätty tiedosto x.txt"` | Luodaan uusi committi.    
 
-`git add .`  
-`git commit -m "Lisätty tiedosto X.txt"`  
+Lisätään tiedostoon *x.txt* uutta sisältöä ja tallennetaan tiedosto
+**HUOM**:  Ei committia eikä `add` tässä vaiheessa.  
 
-Lisätään tiedostoon X.txt väärää sisältöä ja tallennetaan tiedosto | **HUOM**:  Ei committia eikä `add` tässä välissä
-
-Lisätään tiedostoon X.txt uutta sisältöä esim. ZZZ ja tallennetaan.
-
-Huomataan että uusi sisältö oli virhe ja halutaan palata tiedoston X.txt osalta aikaisempaan commitoituun sisältöön  
-`git status`   
-`git checkout -- X.txt`    
+Huomataan että uusi sisältö oli virhe ja halutaan palata tiedoston x.txt osalta aikaisempaan commitoituun sisältöön  
+`git status` | Tarkistetaan gitin tilanne.     
+`git checkout -- x.txt` | Palautetaan tiedosto *x.txt* edellisessä commitissa olevaan tilaan.      
 
 **Tallennettujen ja commitoitujen tietojen peruminen**
 
-Lisätään tiedostoon X.txt uutta sisältöä ZXZX ja tallennetaan muutokset  
-Kommitoidaan muutos  
-`git commit -m "Sisältöä muokattu"` (em. komento ei toimi tiedostoissa joita ei aiemmin ole jo lisätty git add komenolla)
+Lisätään tiedostoon x.txt taas uutta sisältöä ja tallennetaan muutokset.  
+`git commit -m "Sisältöä muokattu"` | Luodaan uusi commit joka sisätää edellä tehdyt muutokset.   
 
-Huomataan että uusi commitoitu sisältö oli virhe ja se halutaan perua. Tarkastetaan mitä muutoksia commitissa oli
+Huomataan että commitoitu sisältö oli virhe ja se halutaan perua. Tarkastetaan mitä muutoksia edellisessä commitissa oli.  
 
-`git log --oneline`  
-`git show *commitin id numero*`  
-`git revert *peruttavan commitin id numero*` TAI `git revert *peruttavan commitin id numero* --no-edit` (jolloin perumisen aiheuttamaa commit viestiä ei muokata)
+`git log --oneline` | Tulostetetaan commitit tiiviissä muodossa. Kopioidaan edellä tehdyn commitin id numero leikepöydälle.      
+`git show *commitin id numero*` | Tarkistetaan mitä muutoksia committi sisältää.    
+`git revert *peruttavan commitin id numero* --no-edit` | Perutaan viimeisimmässä commitissa olevat muutokset ja luodaan uusi committi perumisesta.   
 
 **Työhakemistosta poistettun tiedoston palauttaminen**
 
-`del X.txt`  
-`git checkout HEAD x.txt`  
+Poistetaan tiedosto x.txt työhakemistosta.    
+`git checkout HEAD x.txt` | Palauttaa edellä poistetun tiedoston x.txt työhakemistoon.    
 
-**HUOM** jos poistaminen olisi ehditty jo commitoida  
-`git reset --hard HEAD~1` = kumoaa viimeisimmän kommitin muutokset ja poistaa viimeisimmän kommitin  
+Jos poistaminen olisi ehditty jo commitoida  
+`git reset --hard HEAD~1` | Kumoaa viimeisimmän kommitin muutokset ja poistaa viimeisimmän commitin.  
 
 #### Työhakemiston synkronoiminen GitHubiin
 
-Vaihdetaan paikallisen *master* haaran nimi *main* nimiseksi  
-`git branch -m main`  
+Rekisteröidytään GitHub ympäristöön ja käyttäjätunnusta ei vielä ole olemassa.  
 
-Luodaan repositorio GitHubiin ja otetaan repositorion URL osoite leikepöydälle  
-`git remote add origin https://github.com/AzureandGit/githarjoitus.git` = kytketään paikallinen työkansio Github repositorioon  
+`git branch -m main` | Vaihdetaan paikallisen *master* haaran nimeksi *main*.      
 
-Tarkastetaan etärepositorio =  `git remote -v`  
+Luodaan uusi *projekti* niminen repositorio GitHubiin ja otetaan repositorion URL osoite leikepöydälle.  
+`git remote add origin https://github.com/*oma github tunnus*/projekti.git` | Kytketään paikallinen työkansio Github repositorioon *origin* nimiseksi remoteksi.   
 
-**HUOM:** Remote voidaan uudelleen nimetä komennolla `git remote rename origin github`   
+ `git remote -v` | Tarkastetaan että edellä luotu GitHub repositoria on kytketty remoteksi nimellä *origin*.    
 
-Pusketaan paikallinen työkansio Githubiin =  `git push -u origin main`  
-Pusketaan tägit = `git push origin --tags`  
-Listätään Githubin kautta tiedosto = GitHubissa ollaan yksi commit edellä  
-Haetaan githubin tilanne = `git fetch`  
-Synkronoidaan githubin tilanne paikalliseen työkansioon = `git pull`  
-Poisteaan remote `git remote rm origin`   
+Remote voidaan tarvittaessa nimetä uudelleen komennolla `git remote rename origin *uusi remoten nimi*`     
+
+`git push -u origin main` | Pusketaan paikallinen projekti hakemiston sisältö Githubiin. 
+Annetaan tarvittaessa GitHub käyttäjänimi ja salasana esille tulevaan ikkunaan.  
+`git push origin --tags` | Pusketaan tägit GtiHubiin.    
+
+Siirrytään GitHub ympäristöön ja lisätään sinne uusi *f.txt* niminen tiedosto.  GitHubissa ollaan yksi commit edellä  
+`git fetch` | Haetaan GitHub tilanne paikalliseen ympäristöön.  
+`git status` | Tarkistetaan gitin tilanne. Paikallinen ympäristö on yhden commitin (ja tiedoston) verran perässä GitHubissa olevan repositorian tilannetta.  
+`git pull` | Kopioidaan GitHub:a olevat muutokset (tiedosto *f.txt* ja commit) paikalliseen työhakemistoon.    
+
+Tarvittessa remote voidaan kytkeä irti komennolla remote `git remote rm origin`   
 
 #### Upstream
 
-Jos halutaan ladata sisältöä vieraasta *remotesta* oman työhakemistoon
+Jos halutaan ladata sisältöä vieraasta *remotesta* oman työhakemistoon.  
 
-Forkataan vieras julkinen repositorio omaan GitHubiin
+Forkataan vieras julkinen repositorio omaan GitHubiin.   
 
-Kloonataan oma forkki paikalliseksi työkansioksi
+Kloonataan oma forkki paikalliseksi työkansioksi.  
 
-`git clone https://linkki_omaan_forkkiin.git`
+`git clone https://linkki_omaan_forkkiin.git`  
 
 Lisätään paikallisen työkansioon upstream alkuperäiseen vieras repoon  
-`git remote add upstream https://linkki_vieraaseen_repoon.git`
+`git remote add upstream https://linkki_vieraaseen_repoon.git`  
 
-`git remote -v`
+`git remote -v`  
 
-Alkuperäisessä etä_repossa on muutoksia ja ne pullataan paikalliseen työhakemistoon
+Alkuperäisessä etä_repossa on muutoksia ja ne pullataan paikalliseen työhakemistoon  
 
-`git merge upstream/main`
+`git merge upstream/main`  
 
-Tehdään muutoksia paikalliseen hakemistoon
+Tehdään muutoksia paikalliseen hakemistoon  
 
-Lisätään ja commitoidaan  muutokset
-Työnnetään muutokset omaan forkkiin
-`git push` tai `git push origin`
+Lisätään ja commitoidaan  muutokset  
+Työnnetään muutokset omaan forkkiin  
+`git push` tai `git push origin`  
 
-Luodaan *Pull request*
+Luodaan *Pull request*  
 
 
 
