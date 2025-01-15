@@ -1,10 +1,10 @@
 ## Git versiohallinnan käytöstä
 
-Harmaalla pohjalla näkyvät komennot annetaan joko komentokehotteessa tai *Visual Studio Code*:n pääte (terminal) ikkunassa.  
-Jos käytetään komentokehotetta, tulee työhakemistona olla 
-
 Luodaan ensin uusi *Projekti* niminen kansio/hakemisto esim. *Tiedostot* hakemistoon.  
 `md %userprofile%\documents`  
+
+Harmaalla pohjalla näkyvät komennot annetaan joko komentokehotteessa tai *Visual Studio Code*:n pääte (terminal) ikkunassa.  
+Jos käytetään komentokehotetta, tulee työhakemistona olla *C:\users\omatunnus\Documents\Tiedostot\Projekti*.  
 
 **Alustetaan työkansio Git:ä**
 
