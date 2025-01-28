@@ -69,7 +69,7 @@ Huomataan että tiedostoon tehty muutos halutaan perua.
 
 `git branch` = Tarkastetaan nykyiset branchit.    
 `git branch uusibranch` | Luodaan uusi branch TAI `git checkout -b uusibranch` | Luo ja siirtyy branchiin yhdellä komennolla.  
-`git checkout uusibranch` | Siirrytään uuteen branchiin jos edellä ei käytetty komentoa *git checkout -b uusibranch*  
+`git checkout uusibranch` TAI `git switch uusibranch` | Siirrytään uuteen branchiin jos edellä ei käytetty komentoa *git checkout -b uusibranch*    
 
 **Luodaan uusi tiedosto e.txt ja siihen sisältöä**
 
