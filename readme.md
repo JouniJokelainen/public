@@ -17,6 +17,16 @@ Jos käytetään komentokehotetta, tulee työhakemistona olla *C:\users\omatunnu
 `git config --list --global` | Näyttää globaalit asetukset  
 `git config --edit --global` | Avaa git asetukset oletuseditoriin. Oletuseditori valitaan alun perin gittiä asennettaessa)  
 
+**Tiedosto .gitignore**  
+Luodaan *projekti* hakemistoon uusi tiedosto nimeltä *.gitignore*   
+Luodaan *projekti* hakemistoon uusi hakemisto nimeltä *alustava*  
+Luodaan uusi *suunnitelma.txt* niminen tiedosto hakemistoon *.\alustava*   
+Asetetaan *.gitignore* tiedoston sisällöksi seuraavaa *\alustava* ja tallennetaan muutokset       
+
+`git add .` | Lisätään tiedosto *.gitignore* indeksiin  
+`git status` | Tarkistetaan gitin tilanne  
+`git commit -m "Tiedosto .gitignore luotu"` | Luodaan ensimmäinen committi    
+
 **Luodaan tiedosto a.txt ja sinne sisältöä**
 
 Luodaan projekti hakemistoon uusi *a.txt*  niminen tiedosto.  Asetetaan sisällöksi *a* ja tallennetaan muutokset.  
