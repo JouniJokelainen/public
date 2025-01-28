@@ -35,19 +35,19 @@ Luodaan projekti hakemistoon uusi *a.txt*  niminen tiedosto.  Asetetaan sisäll�
 `git commit -m "Tiedosto a.txt luotu"` | Luodaan uusi committi    
 `git log` | Tarkistetaan commitit  
 
-**Luodaan tiedosto b.txt ja siihen sisältöä ja mutta vasta tässä vaiheessa "tajutaan" että se olisi pitänyt lisätä jo edelliseen commititin**
+**Luodaan tiedosto b.txt ja siihen sisältöä ja "tajutaan" että se olisi pitänyt lisätä jo edelliseen commititin**
 
 Luodaan *projekti* hakemistoon uusi *b.txt*  niminen tiedosto.  Asetetaan sisällöksi *b* ja tallennetaan muutokset.  
 `git add b.txt` | Lisätään *b.txt* indeksiin  
 `git status` | Tarkistetaan gitin tilanne    
-`git commit --amend -m "Lisätty tiedosto A.txt ja B.txt"` | Lisätään indeksissä olevat tiedot eli uusi tiedosto *b.txt* edelliseen kommitiin ja muutetaan commitin komenttia    
+`git commit --amend -m "Lisätty tiedosto A.txt ja B.txt"` | Lisätään indeksissä olevat tiedot eli uusi tiedosto *b.txt* edelliseen kommitiin ja muutetaan commitin kommenttia    
 `git log --oneline` |  Tarkistetaan git commitit tiiviimmässä muodossa 
 
 **Luodaan tiedosto c.txt ja sinne sisältöä**
 
 Luodaan projekti hakemistoon uusi *c.txt*  niminen tiedosto.  Asetetaan sisällöksi *c* ja tallennetaan muutokset.  
 `git add .` | Lisätään tiedosto *c.txt* indeksiin..   
-ja tajutaan että tiedostoa ei olisikaan vielä pitänyt lisätä indeksiin  
+ja tajutaan että tiedostoa ei olisi vielä pitänyt lisätä indeksiin  
 `git diff HEAD` |  Tarkistetaan mitä eroa on työkansiolla ja viimeksi commitoidulla tiedolla     
 `git restore --staged c.txt` | Poistetaan tiedosto *c.txt* indkeksistä eli perutaan edellinen *add .* komento tiedoston *c.txt* osalta.  
 `git status` | Tarkistetaan gitin tilanne. 
@@ -59,10 +59,10 @@ Luodaan projekti hakemistoon uusi *d.txt*  niminen tiedosto.  Asetetaan sisäll�
 `git commit -m "lisätty tiedostot c.txt ja d.txt"` | Luodaan uusi commit.    
 `git log` | Tarkistetaan commitit  
 
-**Lisätään lisää tietoa d.txt tiedostoon ja tallennetaan muutokset (ei commitoida)**
+**Lisätään lisää tietoa d.txt tiedostoon ja tallennetaan muutokset (ei commitoida). Muutokset halutaan kuitenki perua**
 
 Lisätään tiedostoon *d.txt* uutta tietoa ja tallennetaan muutos.  
-Huomataan että muutos halutaan perua.  
+Huomataan että tiedostoon tehty muutos halutaan perua.  
 `git  checkout -- d.txt` | Palautetaan *d.txt* aiempaan versioon eli edellisessä commitissa olevaan tilanteeseen.      
 
 **Luodaan uusi git haara eli branch**
@@ -93,11 +93,11 @@ Tarkistetaan että tiedosto *e.txt* on ilmestynyt työhakemistoon.
 `git log --oneline` |  Listataan commitit ja otetaan jonkin commitin id leikepöydälle    
 `git checkout *commit id*` | Siirrytåään haluttuun committiin sen id-numeron perusteella    
 Työhakemiston sisälktö päivittyy vastaamaan työhakemiston tilannetta committin tallennuksen hetkellä.    
-`chekcout master` | siirrytään takaisin viimeisimmän commitin mukaiseen tilanteeseen.    
+`git chekcout master` | siirrytään takaisin viimeisimmän commitin mukaiseen tilanteeseen.    
 
-**Tägääminen**:
+**Tägien luominen, tarkastelu ja poistaminen**:
 
-`git tag v.1.0` | Lisää ns. *lifhtweight* tägin *v.1.0* joka tarttuu nykyiseen (mutta ei seuraaviin) kommittin.    
+`git tag v.1.0` | Lisää ns. *lightweight* tägin *v.1.0* joka tarttuu nykyiseen (mutta ei seuraaviin) committin.    
 
 Luodaan uusi *y.txt* niminen tiedosto. Asetetaan sisällöksi *y* ja tallennetaan muutokset.     
 `git add y.txt` | Lisätään tiedosto *y.txt* indeksiin.    
