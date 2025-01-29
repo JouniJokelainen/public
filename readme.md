@@ -68,7 +68,7 @@ Huomataan että tiedostoon tehty muutos halutaan perua.
 **Luodaan uusi git haara eli branch**
 
 `git branch` = Tarkastetaan nykyiset branchit.    
-`git branch uusbranch` | Luodaan uusi branch TAI `git checkout -b uusbranch` | Luo ja siirtyy branchiin yhdellä komennolla.
+`git branch uusbranch` | Luodaan uusi branch TAI `git checkout -b uusbranch` | Luo ja siirtyy branchiin yhdellä komennolla.  
 `git branch -m uusbranch uusibranch` | muutetaan haaran nimi uusbranch -> uusibranch  
 `git checkout uusibranch` TAI `git switch uusibranch` | Siirrytään uuteen branchiin jos edellä ei käytetty komentoa *git checkout -b uusibranch*    
 
