@@ -153,14 +153,18 @@ Jos poistaminen olisi ehditty jo commitoida
 `git reset --hard HEAD~1` | Kumoaa viimeisimmän kommitin muutokset ja poistaa viimeisimmän commitin.  
 
 **Commitin poistaminen**
-Halutaan poistaa viimeisin commit.
-Luodaan uusi tiedosto *y.txt* ja asetetaan sisällöksi *y*.
-`git add y.txt` | Lisätään tiedosto *y.txt* indeksiin.
+Halutaan poistaa viimeisin commit.  
+Luodaan uusi tiedosto *y.txt* ja asetetaan sisällöksi *y*.  
+`git add y.txt` | Lisätään tiedosto *y.txt* indeksiin.  
 `git commit -m "Lisätty tiedosto y.txt"` | Luodaan uusi commit joka sisätää tiedoston y.txt ja sen sisällön.   
-`git log --oneline` | Tarkastetaan commitit tiiviissä muodossa.
-Todetaan että koko tiedosto, siihen tehdyt muutokset olivat virhe > halutaan siis perua kaikki viimeisimmän commitin sisältämät muutokset työhakemistossa sekä koko viimeisin commit
+`git log --oneline` | Tarkastetaan commitit tiiviissä muodossa.  
+Todetaan että koko tiedosto, siihen tehdyt muutokset olivat virhe > halutaan siis perua kaikki viimeisimmän commitin sisältämät muutokset työhakemistossa sekä koko viimeisin commit   
 `git reset --hard *viimeisimmän commitin hash* TAI `git reset --hard HEAD~1`    
 
+Jos poistaa ainoastaan commit mutta säästää muutokset työkansiossa
+`git reset --soft *commit hash*` TAI `git reset --soft HEAD~1`
+
+*** HUOM Älä käytä git revert komentoa jos olet jakanut projektin muille ***
 
 #### Työhakemiston synkronoiminen GitHubiin
 
