@@ -9,8 +9,8 @@ Jos käytetään komentokehotetta, tulee työhakemistona olla *C:\users\omatunnu
 **Alustetaan työkansio Git:ä**
 
 `git init ` | Alustetaan työhakemisto git käyttöä varten   
-` git config --global user.email "you@example.com" `| Määrittää sähköpostiosoitteen    
-` git config --global user.name "Etunimi Sukunimi"` | Määrittää käyttäjänimen    
+`git config --global user.email "you@example.com" `| Määrittää sähköpostiosoitteen    
+`git config --global user.name "Etunimi Sukunimi"` | Määrittää käyttäjänimen    
 `git config --list` | Näyttää asetukset  
 `git config user.name` | Näyttää käyttäjän edellä määritetyn käyttäjänimen    
 `git config --global init.defaultBranch main` | Muuttaa päähaaran nimeksi main masterin sijaan    
@@ -49,7 +49,7 @@ Luodaan projekti hakemistoon uusi *c.txt*  niminen tiedosto.  Asetetaan sisäll�
 `git add .` | Lisätään tiedosto *c.txt* indeksiin..   
 ja tajutaan että tiedostoa ei olisi vielä pitänyt lisätä indeksiin  
 `git diff HEAD` |  Tarkistetaan mitä eroa on työkansiolla ja viimeksi commitoidulla tiedolla     
-`git restore --staged c.txt` | Poistetaan tiedosto *c.txt* indkeksistä eli perutaan edellinen *add .* komento tiedoston *c.txt* osalta.  
+`git restore --staged c.txt` | Poistetaan tiedosto *c.txt* indeksistä eli perutaan edellinen *add .* komento tiedoston *c.txt* osalta.  
 `git status` | Tarkistetaan gitin tilanne. 
 
 **Lisätään tiedosto d.txt ja siihen sisältöä**
@@ -59,7 +59,7 @@ Luodaan projekti hakemistoon uusi *d.txt*  niminen tiedosto.  Asetetaan sisäll�
 `git commit -m "lisätty tiedostot c.txt ja d.txt"` | Luodaan uusi commit.    
 `git log` | Tarkistetaan commitit  
 
-**Lisätään lisää tietoa d.txt tiedostoon ja tallennetaan muutokset (ei commitoida). Muutokset halutaan kuitenki perua**
+**Lisätään lisää tietoa d.txt tiedostoon ja tallennetaan muutokset (ei commitoida). Muutokset halutaan kuitenkin perua**
 
 Lisätään tiedostoon *d.txt* uutta tietoa ja tallennetaan muutos.  
 Huomataan että tiedostoon tehty muutos halutaan perua.  
@@ -129,7 +129,7 @@ Lisätään työkansioon tiedosto x.txt ja asetetaan sisällöksi *x* ja tallenn
 Lisätään tiedostoon *x.txt* uutta sisältöä ja tallennetaan tiedosto
 **HUOM**:  Ei committia eikä `add` tässä vaiheessa.  
 
-Huomataan että uusi sisältö oli virhe ja halutaan palata tiedoston x.txt osalta aikaisempaan commitoituun sisältöön  
+Huomataan että uusi sisältö oli virhe ja halutaan palata tiedoston *x.txt* osalta aikaisempaan commitoituun sisältöön  
 `git status` | Tarkistetaan gitin tilanne.     
 `git checkout -- x.txt` | Palautetaan tiedosto *x.txt* edellisessä commitissa olevaan tilaan.      
 
@@ -152,10 +152,19 @@ Poistetaan tiedosto x.txt työhakemistosta.
 Jos poistaminen olisi ehditty jo commitoida  
 `git reset --hard HEAD~1` | Kumoaa viimeisimmän kommitin muutokset ja poistaa viimeisimmän commitin.  
 
+**Commitin poistaminen**
+Halutaan poistaa viimeisin commit.
+Luodaan uusi tiedosto *y.txt* ja asetetaan sisällöksi *y*.
+`git add y.txt` | Lisätään tiedosto *y.txt* indeksiin.
+`git commit -m "Lisätty tiedosto y.txt"` | Luodaan uusi commit joka sisätää tiedoston y.txt ja sen sisällön.   
+`git log --oneline` | Tarkastetaan commitit tiiviissä muodossa.
+Todetaan että koko tiedosto, siihen tehdyt muutokset olivat virhe > halutaan siis perua kaikki viimeisimmän commitin sisältämät muutokset työhakemistossa sekä koko viimeisin commit
+`git reset --hard *viimeisimmän commitin hash* TAI `git reset --hard HEAD~1`    
+
+
 #### Työhakemiston synkronoiminen GitHubiin
 
 Rekisteröidytään GitHub ympäristöön ja käyttäjätunnusta ei vielä ole olemassa.  
-
 `git branch -m main` | Vaihdetaan paikallisen *master* haaran nimeksi *main*.      
 
 Luodaan uusi *projekti* niminen repositorio GitHubiin ja otetaan repositorion URL osoite leikepöydälle.  
