@@ -20,7 +20,7 @@ Jos käytetään komentokehotetta, tulee työhakemistona olla *C:\users\omatunnu
 **Tiedosto .gitignore**  
 Luodaan *projekti* hakemistoon uusi tiedosto nimeltä *.gitignore*   
 Luodaan *projekti* hakemistoon uusi hakemisto nimeltä *alustava*  
-Luodaan uusi *suunnitelma.txt* niminen tiedosto hakemistoon *.\alustava*   
+Luodaan uusi *suunnitelma.txt* niminen tiedosto hakemistoon *alustava*   
 Asetetaan *.gitignore* tiedoston sisällöksi seuraavaa *alustava/* ja tallennetaan muutokset       
 
 `git add .` | Lisätään tiedosto *.gitignore* indeksiin  
