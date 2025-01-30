@@ -165,7 +165,7 @@ Todetaan että tiedosto commitoitiin liian aikaisin > halutaan perua viimeisin c
 Jos poistaa ainoastaan commit mutta säästää muutokset työkansiossa
 `git reset --soft *commit hash*` TAI `git reset --soft HEAD~1`
 
-*** HUOM Älä käytä git revert komentoa jos olet jakanut projektin muille ***
+*** HUOM Älä käytä git reset komentoa jos olet jakanut projektin muille esim. GitHub:a.***
 
 #### Työhakemiston synkronoiminen GitHubiin
 
