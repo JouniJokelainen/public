@@ -175,11 +175,11 @@ Rekisteröidytään GitHub ympäristöön ja käyttäjätunnusta ei vielä ole o
 Luodaan uusi *projekti* niminen repositorio GitHubiin ja otetaan repositorion URL osoite leikepöydälle.  
 `git remote add origin https://github.com/*oma github tunnus*/projekti.git` | Kytketään paikallinen työkansio Github repositorioon *origin* nimiseksi remoteksi.   
 
- `git remote -v` | Tarkastetaan että edellä luotu GitHub repositoria on kytketty remoteksi nimellä *origin*.    
+`git remote -v` | Tarkastetaan että edellä luotu GitHub repositoria on kytketty remoteksi nimellä *origin*.    
 
 Remote voidaan tarvittaessa nimetä uudelleen komennolla `git remote rename origin *uusi remoten nimi*`     
 
-`git push -u origin main` | Pusketaan paikallinen projekti hakemiston sisältö Githubiin. 
+`git push -u origin main` | Pusketaan paikallinen projekti hakemiston sisältö Githubiin. (*git push origin --all* puskee kaikki paikalliset haarat GitHubiin)  
 Annetaan tarvittaessa GitHub käyttäjänimi ja salasana esille tulevaan ikkunaan.  
 `git push origin --tags` | Pusketaan tägit GtiHubiin.    
 
