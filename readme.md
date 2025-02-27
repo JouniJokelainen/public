@@ -9,7 +9,7 @@ Jos käytetään komentokehotetta, tulee työhakemistona olla *C:\users\omatunnu
 **Alustetaan työkansio Git:ä**
 
 `git init ` | Alustetaan työhakemisto git käyttöä varten   
-`git config --global user.email "you@example.com" `| Määrittää sähköpostiosoitteen    
+`git config --global user.email "etunimi.sukunimi@example.com" `| Määrittää sähköpostiosoitteen    
 `git config --global user.name "Etunimi Sukunimi"` | Määrittää käyttäjänimen    
 `git config --list` | Näyttää asetukset  
 `git config user.name` | Näyttää käyttäjän edellä määritetyn käyttäjänimen    
@@ -65,12 +65,12 @@ Lisätään tiedostoon *d.txt* uutta tietoa ja tallennetaan muutos.
 Huomataan että tiedostoon tehty muutos halutaan perua.  
 `git  checkout -- d.txt` | Palautetaan *d.txt* aiempaan versioon eli edellisessä commitissa olevaan tilanteeseen.      
 
-**Luodaan uusi git haara eli branch**
+**Luodaan uusi muutoshaara eli branch**
 
-`git branch` = Tarkastetaan nykyiset branchit.    
-`git branch uusbranch` | Luodaan uusi branch TAI `git checkout -b uusbranch` | Luo ja siirtyy branchiin yhdellä komennolla.  
-`git branch -m uusbranch uusibranch` | muutetaan haaran nimi uusbranch -> uusibranch  
-`git checkout uusibranch` TAI `git switch uusibranch` | Siirrytään uuteen branchiin jos edellä ei käytetty komentoa *git checkout -b uusibranch*    
+`git branch` = Tarkastetaan nykyiset muutoshaarat/branchit.    
+`git branch uusbranch` | Luodaan uusi muutoshaara/branch TAI `git checkout -b uusbranch` | Luo ja siirtyy muutoshaaraan yhdellä komennolla.  
+`git branch -m uusbranch uusibranch` | muutetaan muutoshaaran nimi uusbranch -> uusibranch  
+`git checkout uusibranch` TAI `git switch uusibranch` | Siirrytään uuteen muutoshaaraan jos edellä ei käytetty komentoa *git checkout -b uusibranch*    
 
 **Luodaan uusi tiedosto e.txt ja siihen sisältöä**
 
@@ -78,16 +78,16 @@ Luodaan uusi *e.txt* niminen tiedosto.  Asetetaan sisällöksi *e* ja tallenneta
 `git add e.txt` | Lisätään tiedosto *e.txt*  indeksiin.    
 `git commit -m "Lisätty tiedosto e.txt"` | Luodaan uusi committi.    
 `git log`   Tarkistetaan commitit.      
-`git checkout main` |  Siirrytään takaisin *master* branchiin  
-`git branch` | Tarkistetaan aktivinen branch    
+`git checkout main` |  Siirrytään takaisin *master* muutoshaaraan  
+`git branch` | Tarkistetaan aktivinen muutoshaara    
 `git merge uusibranch` | Yhdistetaan *master* ja *uusibranch haaroissa* olevat tiedot ja commitit.    
 
 **Tarkastetaan että e.txt on ilmestynyt työkansioon ja poistetaan uusibranch** 
 
 Tarkistetaan että tiedosto *e.txt* on ilmestynyt työhakemistoon.  
 
-`git log` |  Tarkistetaan että edellä uusihaara branchissä luotu committi on lisätty *master* haaran kommitteihin.   
-`git branch -d uusibranch` | Poistetaan edellä luotu *uusibranch* niminen branchi.    
+`git log` |  Tarkistetaan että edellä uusihaara muutoshaarassa luotu committi on lisätty *master* muutoshaaran kommitteihin.   
+`git branch -d uusibranch` | Poistetaan edellä luotu *uusibranch* niminen muutoshaara.    
 
 **Työhakemiston tarkastelu halutussa commitissa**   
 
