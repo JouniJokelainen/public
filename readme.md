@@ -148,10 +148,11 @@ Huomataan että commitoitu sisältö oli virhe ja se halutaan perua. Tarkastetaa
 **Työhakemistosta poistettun tiedoston palauttaminen**
 
 Poistetaan tiedosto x.txt työhakemistosta.    
-`git checkout HEAD x.txt` | Palauttaa edellä poistetun tiedoston x.txt työhakemistoon.    
-
+`git checkout HEAD x.txt` TAI `git checkout -- x.txt` | Palauttaa edellä poistetun tiedoston x.txt työhakemistoon.    
+ 
 Jos poistaminen olisi ehditty jo commitoida  
-`git reset --hard HEAD~1` | Kumoaa viimeisimmän kommitin muutokset ja poistaa viimeisimmän commitin.  
+`git reset --hard HEAD~1` tai git revert --no-edit *Poiston commitID* | Kumoaa viimeisimmän kommitin muutokset ja poistaa viimeisimmän commitin.  
+
 
 **Commitin poistaminen**
 Halutaan poistaa viimeisin commit.  
