@@ -68,9 +68,9 @@ Huomataan että tiedostoon tehty muutos halutaan perua.
 **Luodaan uusi muutoshaara eli branch**
 
 `git branch` = Tarkastetaan nykyiset muutoshaarat/branchit.    
-`git branch uusbranch` | Luodaan uusi muutoshaara/branch TAI `git checkout -b uusbranch` | Luo ja siirtyy muutoshaaraan yhdellä komennolla.  
-`git branch -m uusbranch uusibranch` | muutetaan muutoshaaran nimi uusbranch -> uusibranch  
-`git checkout uusibranch` TAI `git switch uusibranch` | Siirrytään uuteen muutoshaaraan jos edellä ei käytetty komentoa *git checkout -b uusibranch*    
+`git branch bugfixi` | Luodaan uusi muutoshaara/branch TAI `git checkout -b bugfixi` | Luo ja siirtyy muutoshaaraan bugfixi yhdellä komennolla.  
+`git branch -m bugfixi bugfix` | muutetaan muutoshaaran nimi bugfixi -> bugfix  
+`git checkout bugfix` TAI `git switch bugfix` | Siirrytään uuteen muutoshaaraan jos edellä ei käytetty komentoa *git checkout -b bugfix*    
 
 **Luodaan uusi tiedosto e.txt ja siihen sisältöä**
 
@@ -80,14 +80,14 @@ Luodaan uusi *e.txt* niminen tiedosto.  Asetetaan sisällöksi *e* ja tallenneta
 `git log`   Tarkistetaan commitit.      
 `git checkout main` |  Siirrytään takaisin *master* muutoshaaraan  
 `git branch` | Tarkistetaan aktivinen muutoshaara    
-`git merge uusibranch` | Yhdistetaan *master* ja *uusibranch haaroissa* olevat tiedot ja commitit.    
+`git merge bugfix` | Yhdistetaan *master* ja *bugfix haaroissa* olevat tiedot ja commitit.    
 
-**Tarkastetaan että e.txt on ilmestynyt työkansioon ja poistetaan uusibranch** 
+**Tarkastetaan että e.txt on ilmestynyt työkansioon ja poistetaan bugfix** 
 
 Tarkistetaan että tiedosto *e.txt* on ilmestynyt työhakemistoon.  
 
 `git log` |  Tarkistetaan että edellä uusihaara muutoshaarassa luotu committi on lisätty *master* muutoshaaran kommitteihin.   
-`git branch -d uusibranch` | Poistetaan edellä luotu *uusibranch* niminen muutoshaara.    
+`git branch -d bugfix` | Poistetaan edellä luotu *bugfix* niminen muutoshaara.    
 
 **Työhakemiston tarkastelu halutussa commitissa**   
 
