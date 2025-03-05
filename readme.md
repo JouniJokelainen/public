@@ -80,13 +80,13 @@ Luodaan uusi *e.txt* niminen tiedosto.  Asetetaan sisällöksi *e* ja tallenneta
 `git log`   Tarkistetaan commitit.      
 `git checkout main` |  Siirrytään takaisin *master* muutoshaaraan  
 `git branch` | Tarkistetaan aktivinen muutoshaara    
-`git merge bugfix` | Yhdistetaan *master* ja *bugfix haaroissa* olevat tiedot ja commitit.    
+`git merge bugfix` | Yhdistetaan *master* ja *bugfix* haaroissa olevat tiedot ja commitit.    
 
-**Tarkastetaan että e.txt on ilmestynyt työkansioon ja poistetaan bugfix** 
+**Tarkastetaan että e.txt on ilmestynyt työkansioon ja poistetaan muutoshaara bugfix** 
 
 Tarkistetaan että tiedosto *e.txt* on ilmestynyt työhakemistoon.  
 
-`git log` |  Tarkistetaan että edellä uusihaara muutoshaarassa luotu committi on lisätty *master* muutoshaaran kommitteihin.   
+`git log` |  Tarkistetaan että edellä *bugfix* muutoshaarassa luotu committi on lisätty *master* muutoshaaran kommitteihin.   
 `git branch -d bugfix` | Poistetaan edellä luotu *bugfix* niminen muutoshaara.    
 
 **Työhakemiston tarkastelu halutussa commitissa**   
@@ -166,7 +166,7 @@ Todetaan että tiedosto commitoitiin liian aikaisin > halutaan perua viimeisin c
 Jos poistaa ainoastaan commit mutta säästää muutokset työkansiossa
 `git reset --soft *commit hash*` TAI `git reset --soft HEAD~1`
 
-*** HUOM Älä käytä git reset komentoa jos olet jakanut projektin muille esim. GitHub:a.***
+*** HUOM Älä käytä *git reset* komentoa jos olet jakanut projektin muille esim. GitHub:a.***
 
 #### Työhakemiston synkronoiminen GitHubiin
 
