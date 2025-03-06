@@ -104,7 +104,8 @@ Luodaan uusi *y.txt* niminen tiedosto. Asetetaan sisällöksi *y* ja tallennetaa
 `git add y.txt` | Lisätään tiedosto *y.txt* indeksiin.    
 `git commit -m "Lisätty tiedosto y.txt` | Luodaan uusi committi.    
 `git log --oneline` | Tarkistetaan git commitit tiiviissä muodossa.    
-`git tag` | Tarkistetaan tägit.     
+`git tag` | Tarkistetaan tägit.    
+`git log` v.1.0 --oneline` | Näyttää commitit jotka edeltävät mainittua tagiä    
 
 `git tag -a v.1.1 -m "Versio 1.1"` | Luodaan ns. *annotated täg*.     
 `git show v.1.1` | Näyttää tägin *v.1.1*  
