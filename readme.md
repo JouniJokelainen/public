@@ -116,8 +116,8 @@ Luodaan uusi *y.txt* niminen tiedosto. Asetetaan sisällöksi *y* ja tallennetaa
 
 **Tägit eivät kopioidu esim. Githubiin automaattisesti**   
 Jos tägit halutaan kopioida esim. GitHub ympäristöön tulee ne siirtää sinne erikseen.  
-`git push v.1.1` | Kopioi vain  kyseisen tägin.   
-`git push tags` | Kopioi kaikki tägit    
+`git push v.1.1` | Puskee vain kyseisen tägin.   
+`git push tags` | Puskee kaikki tägit GtiHub:n    
 `git push --delete v1.1` | Poistaa ko. tägin remotesta (esim. GitHub).    
 
 #### Tiedostojen palauttamisesta: 
