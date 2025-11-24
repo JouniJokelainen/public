@@ -104,7 +104,7 @@ Tarkistetaan että tiedosto *e.txt* on ilmestynyt työhakemistoon.
 Työhakemiston sisälktö päivittyy vastaamaan työhakemiston tilannetta committin tallennuksen hetkellä.    
 `git chekcout master` | siirrytään takaisin viimeisimmän commitin mukaiseen tilanteeseen.    
 
-**Tägien luominen, tarkastelu ja poistaminen**:
+**Tägien luominen, tarkastelu ja poistaminen**:  
 
 `git tag v.1.0` | Lisää ns. *lightweight* tägin *v.1.0* joka tarttuu nykyiseen (mutta ei seuraaviin) committin.    
 
@@ -123,6 +123,7 @@ Luodaan uusi *y.txt* niminen tiedosto. Asetetaan sisällöksi *y* ja tallennetaa
 `git tag -d v1.2`| Poistetaan edellä luotu rinnakkainen v1.2 tägi    
 
 **Tägit eivät kopioidu esim. Githubiin automaattisesti**   
+
 Jos tägit halutaan kopioida esim. GitHub ympäristöön tulee ne siirtää sinne erikseen.  
 `git push v.1.1` | Puskee vain kyseisen tägin.   
 `git push --tags` | Puskee kaikki tägit GtiHub:n    
