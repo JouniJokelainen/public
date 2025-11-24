@@ -1,5 +1,12 @@
 ## Git versiohallinnan käytöstä
 
+**Git:n asentaminen**  
+Varmista että olet asentanut Git ohjelmiston. Git:n voit ladata [täältä](https://git-scm.com/install/).  
+Avaa komentokehote (cmd.exe) aja anna komento *git*. 
+Jos *git* on asennettu oikein, edellinen komento tulostaa näytölle ohjeita git:n käytöstä.   
+
+**Projekti aloittaminen**  
+
 Luodaan ensin uusi *Projekti* niminen kansio/hakemisto esim. *Tiedostot* hakemistoon.  
 `md %userprofile%\documents`  
 
