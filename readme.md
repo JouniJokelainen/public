@@ -3,13 +3,13 @@
 **Git:n asentaminen**  
 
 Varmista että olet asentanut Git ohjelmiston. Voit asentaa Git:n oletusasetuksin. Git:n voit ladata [täältä](https://git-scm.com/install/).  
-Avaa komentokehote (cmd.exe) aja anna komento `git`. 
+Avaa komentokehote (*cmd.exe*) aja anna komento `git`. 
 Jos git on asennettu oikein, edellinen komento tulostaa näytölle ohjeita git:n käytöstä.   
 Jos komento palauttaa ilmoituksen tuntemattomasta komennosta, sulje kaikki komentokehoteikkunat ja mahdolliset ohjelmointieditorit. Avaa komentotulkki ja kokeile komentoa uudelleen.  
 
 **Projekti aloittaminen**  
 
-Luodaan ensin uusi *Projekti* niminen kansio/hakemisto esim. *Tiedostot* hakemistoon.  
+Luodaan komentokehotteessa uusi *Projekti* niminen kansio/hakemisto esim. *Tiedostot* hakemistoon.  
 `md %userprofile%\documents`  
 
 Harmaalla pohjalla näkyvät komennot annetaan joko komentokehotteessa tai *Visual Studio Code*:n pääte (terminal) ikkunassa.  
